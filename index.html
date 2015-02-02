@@ -16,17 +16,17 @@
         WeixinApi.enableDebugMode();
 
         // 给按钮增加click事件：请不要太纠结这个写法，demo而已
-        var addEvent = function(elId,listener){
-            document.getElementById(elId)
-                    .addEventListener('click',function(e){
-                        if(!window.WeixinApi || !window.WeixinJSBridge) {
-                            alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
-                            e.preventDefault();
-                            return false;
-                        }
-                        listener(this,e);
-                    },false);
-        };
+        // var addEvent = function(elId,listener){
+        //     document.getElementById(elId)
+        //             .addEventListener('click',function(e){
+        //                 if(!window.WeixinApi || !window.WeixinJSBridge) {
+        //                     alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
+        //                     e.preventDefault();
+        //                     return false;
+        //                 }
+        //                 listener(this,e);
+        //             },false);
+        // };
 
         // 两个Flag
         var optionMenuOn = true;
