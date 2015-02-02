@@ -29,85 +29,85 @@
         // };
 
         // 两个Flag
-        var optionMenuOn = true;
-        var toolbarOn = true;
+        // var optionMenuOn = true;
+        // var toolbarOn = true;
 
         // optionMenu的控制
-        addEvent('optionMenu',function(el,e){
-            if(optionMenuOn) {
-                el.innerHTML = "WeixinApi.showOptionMenu";
-                WeixinApi.hideOptionMenu();
-            }else{
-                el.innerHTML = "WeixinApi.hideOptionMenu";
-                WeixinApi.showOptionMenu();
-            }
-            optionMenuOn = !optionMenuOn;
-        });
+        // addEvent('optionMenu',function(el,e){
+        //     if(optionMenuOn) {
+        //         el.innerHTML = "WeixinApi.showOptionMenu";
+        //         WeixinApi.hideOptionMenu();
+        //     }else{
+        //         el.innerHTML = "WeixinApi.hideOptionMenu";
+        //         WeixinApi.showOptionMenu();
+        //     }
+        //     optionMenuOn = !optionMenuOn;
+        // });
 
         // 获取网络类型
-        addEvent('networkType',function(el,e){
-            WeixinApi.getNetworkType(function(network) {
-                alert("当前网络类型：" + network);
-            });
-        });
+        // addEvent('networkType',function(el,e){
+        //     WeixinApi.getNetworkType(function(network) {
+        //         alert("当前网络类型：" + network);
+        //     });
+        // });
 
         // 调起客户端的图片播放组件
-        addEvent('imagePreview',function(el,e){
-            location.href = "http://www.baidufe.com/wximage?tag=%E7%BE%8E%E5%A5%B3";
-        });
+        // addEvent('imagePreview',function(el,e){
+        //     location.href = "http://www.baidufe.com/wximage?tag=%E7%BE%8E%E5%A5%B3";
+        // });
 
         // 关闭窗口
-        addEvent('closeWindow',function(el,e){
-            WeixinApi.closeWindow({
-                success : function(resp){
-                    alert('关闭窗口成功！');
-                },
-                fail : function(resp){
-                    alert('关闭窗口失败');
-                }
-            });
-        });
+        // addEvent('closeWindow',function(el,e){
+        //     WeixinApi.closeWindow({
+        //         success : function(resp){
+        //             alert('关闭窗口成功！');
+        //         },
+        //         fail : function(resp){
+        //             alert('关闭窗口失败');
+        //         }
+        //     });
+        // });
 
         // 打开扫码
-        addEvent('scanQRCode',function(el,e){
-            WeixinApi.scanQRCode({
-                success : function(resp){
-                    alert('扫描器已打开！');
-                },
-                fail : function(resp){
-                    alert('扫描器无法打开');
-                }
-            });
-        });
+        // addEvent('scanQRCode',function(el,e){
+        //     WeixinApi.scanQRCode({
+        //         success : function(resp){
+        //             alert('扫描器已打开！');
+        //         },
+        //         fail : function(resp){
+        //             alert('扫描器无法打开');
+        //         }
+        //     });
+        // });
 
         // 判断是否安装对应的应用（需要官方打开权限）
-        addEvent("getInstallState", function(el, e) {
-            WeixinApi.getInstallState({
-                packageName: "cn.dxy.android.aspirin",
-                packageUrl: "dxy-aspirin"
-            }, {
-                success: function(resp) {
-                    alert("App is installed, version " + resp.version);
-                },
-                fail: function(resp) {
-                    alert("Oops, something goes wrong or app is not installed.");
-                }
-            })
-        });
+        // addEvent("getInstallState", function(el, e) {
+        //     WeixinApi.getInstallState({
+        //         packageName: "cn.dxy.android.aspirin",
+        //         packageUrl: "dxy-aspirin"
+        //     }, {
+        //         success: function(resp) {
+        //             alert("App is installed, version " + resp.version);
+        //         },
+        //         fail: function(resp) {
+        //             alert("Oops, something goes wrong or app is not installed.");
+        //         }
+        //     })
+        // });
 
         // 发送邮件
-        addEvent("sendEmail", function(el, e) {
-            WeixinApi.sendEmail({
-                subject : 'Hello world！',
-                body : '这是一封测试邮件，Demo而已，慢慢玩儿吧！'
-            });
-        });
+        // addEvent("sendEmail", function(el, e) {
+        //     WeixinApi.sendEmail({
+        //         subject : 'Hello world！',
+        //         body : '这是一封测试邮件，Demo而已，慢慢玩儿吧！'
+        //     });
+        // });
 
-        // 刷新
-        addEvent('refresh',function(el,e){
-            e.preventDefault();
-            location.replace('?' + Math.random(),true);
-        });
+        // // 刷新
+        // addEvent('refresh',function(el,e){
+        //     e.preventDefault();
+        //     location.replace('?' + Math.random(),true);
+        // });
 
         // 需要分享的内容，请放到ready里
         WeixinApi.ready(function(Api) {
