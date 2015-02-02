@@ -115,10 +115,10 @@
             // 微信分享的数据
             var wxData = {
                 "appId": "", // 服务号可以填写appId
-                "imgUrl" : 'http://www.baidufe.com/fe/blog/static/img/weixin-qrcode-2.jpg',
-                "link" : 'http://www.baidufe.com',
-                "desc" : '大家好，我是Alien，Web前端&Android客户端码农，喜欢技术上的瞎倒腾！欢迎多交流',
-                "title" : "Hello，我是Alien"
+                "imgUrl" : 'http://stupidtang.github.com/images/icon.jpg',
+                "link" : 'http://stupidtang.github.com',
+                "desc" : '欢迎来到Fion的个人主页，游记已更新！',
+                "title" : "唐惠安的个人主页"
             };
 
             // 分享的回调
@@ -129,17 +129,17 @@
                 // 分享操作开始之前
                 ready : function() {
                     // 你可以在这里对分享的数据进行重组
-                    alert("准备分享");
+                    //alert("准备分享");
                 },
                 // 分享被用户自动取消
                 cancel : function(resp) {
                     // 你可以在你的页面上给用户一个小Tip，为什么要取消呢？
-                    alert("分享被取消，msg=" + resp.err_msg);
+                    //alert("分享被取消，msg=" + resp.err_msg);
                 },
                 // 分享失败了
                 fail : function(resp) {
                     // 分享失败了，是不是可以告诉用户：不要紧，可能是网络问题，一会儿再试试？
-                    alert("分享失败，msg=" + resp.err_msg);
+                    //alert("分享失败，msg=" + resp.err_msg);
                 },
                 // 分享成功
                 confirm : function(resp) {
@@ -168,9 +168,9 @@
             // 有可能用户是直接用微信“扫一扫”打开的，这个情况下，optionMenu、toolbar都是off状态
             // 为了方便用户测试，我先来trigger show一下
             // optionMenu
-            var elOptionMenu = document.getElementById('optionMenu');
-            elOptionMenu.click(); // 先隐藏
-            elOptionMenu.click(); // 再显示
+            // var elOptionMenu = document.getElementById('optionMenu');
+            // elOptionMenu.click(); // 先隐藏
+            // elOptionMenu.click(); // 再显示
         });
 
     </script>
