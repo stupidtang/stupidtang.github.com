@@ -8,13 +8,93 @@
         <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
         <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/style.css">
         <link rel="Shortcut Icon" href="images/icon.jpg">
-        <!-- 引入微信api -->
-        <script type="text/javascript" src="javascripts/weixin.js"></script>
-        <script type="text/javascript">
-
+        <title>
+            唐惠安的个人主页
+        </title>
+    </head>
+    
+    <body>
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+                <a id="forkme_banner" href="https://github.com/stupidtang">
+                    进入我的github仓库
+                </a>
+                <h1 id="project_title">
+                    姓唐，名惠安
+                </h1>
+                <h2 id="project_tagline">
+                    不要让这个世界的复杂性阻碍你前进，
+                    <br>
+                    要成为一个行动主义者。
+                </h2>
+            </header>
+        </div>
+        <!-- MAIN CONTENT -->
+        <!-- 顶部个人名称及签名 -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h3>
+                    <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"
+                    aria-hidden="true">
+                        <span class="octicon octicon-link">
+                        </span>
+                    </a>
+                    Welcome to My home.
+                </h3>
+                <p>
+                    我，一直在路上
+                </p>
+            </section>
+        </div>
+        <!-- 个人图片 -->
+        <div id="main11">
+            <img src="images/me.jpg" width="30%">
+        </div>
+        <!-- 美景链接板块 -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h3>
+                    <a href="general.html">
+                        ↓↓美景图片->点击查看更多
+                    </a>
+                </h3>
+            </section>
+        </div>
+        <div id="main11">
+            <img src="images/pic1.jpg" width="50%">
+        </div>
+        <!-- 西安游记板块 -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h3>
+                    <a href="xian.html">
+                        ↓↓西安游记->点击查看详情
+                    </a>
+                </h3>
+            </section>
+        </div>
+        <div id="main11">
+            <img src="images/xian/xian.png" width="50%">
+        </div>
+        <!-- FOOTER -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p>
+                    Published with
+                    <a href="http://pages.github.com">
+                        GitHub Pages
+                    </a>
+                </p>
+                <p>
+                    Copyright by Fion@2015
+                </p>
+            </footer>
+        </div>
+    </body>
+    <script type="text/javascript">
         // 开启Api的debug模式
         // WeixinApi.enableDebugMode();
-
         // 给按钮增加click事件：请不要太纠结这个写法，demo而已
         // var addEvent = function(elId,listener){
         //     document.getElementById(elId)
@@ -27,11 +107,9 @@
         //                 listener(this,e);
         //             },false);
         // };
-
         // 两个Flag
         // var optionMenuOn = true;
         // var toolbarOn = true;
-
         // optionMenu的控制
         // addEvent('optionMenu',function(el,e){
         //     if(optionMenuOn) {
@@ -43,19 +121,16 @@
         //     }
         //     optionMenuOn = !optionMenuOn;
         // });
-
         // 获取网络类型
         // addEvent('networkType',function(el,e){
         //     WeixinApi.getNetworkType(function(network) {
         //         alert("当前网络类型：" + network);
         //     });
         // });
-
         // 调起客户端的图片播放组件
         // addEvent('imagePreview',function(el,e){
         //     location.href = "http://www.baidufe.com/wximage?tag=%E7%BE%8E%E5%A5%B3";
         // });
-
         // 关闭窗口
         // addEvent('closeWindow',function(el,e){
         //     WeixinApi.closeWindow({
@@ -67,7 +142,6 @@
         //         }
         //     });
         // });
-
         // 打开扫码
         // addEvent('scanQRCode',function(el,e){
         //     WeixinApi.scanQRCode({
@@ -79,7 +153,6 @@
         //         }
         //     });
         // });
-
         // 判断是否安装对应的应用（需要官方打开权限）
         // addEvent("getInstallState", function(el, e) {
         //     WeixinApi.getInstallState({
@@ -94,7 +167,6 @@
         //         }
         //     })
         // });
-
         // 发送邮件
         // addEvent("sendEmail", function(el, e) {
         //     WeixinApi.sendEmail({
@@ -102,16 +174,13 @@
         //         body : '这是一封测试邮件，Demo而已，慢慢玩儿吧！'
         //     });
         // });
-
         // // 刷新
         // addEvent('refresh',function(el,e){
         //     e.preventDefault();
         //     location.replace('?' + Math.random(),true);
         // });
-
         // 需要分享的内容，请放到ready里
         // WeixinApi.ready(function(Api) {
-
         //     // 微信分享的数据
         //     var wxData = {
         //         "appId": "", // 服务号可以填写appId
@@ -120,12 +189,10 @@
         //         "desc" : '欢迎来到Fion的个人主页，游记已更新！',
         //         "title" : "唐惠安的个人主页"
         //     };
-
         //     // 分享的回调
         //     var wxCallbacks = {
         //         // 关闭favorite
         //         favorite:false,
-
         //         // 分享操作开始之前
         //         ready : function() {
         //             // 你可以在这里对分享的数据进行重组
@@ -152,19 +219,14 @@
         //             alert("分享" + (shareTo ? "到" + shareTo : "") + "结束，msg=" + resp.err_msg);
         //         }
         //     };
-
         //     // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
         //     Api.shareToFriend(wxData, wxCallbacks);
-
         //     // 点击分享到朋友圈，会执行下面这个代码
         //     Api.shareToTimeline(wxData, wxCallbacks);
-
         //     // 点击分享到腾讯微博，会执行下面这个代码
         //     Api.shareToWeibo(wxData, wxCallbacks);
-
         //     // iOS上，可以直接调用这个API进行分享，一句话搞定
         //     Api.generalShare(wxData,wxCallbacks);
-
         //     // 有可能用户是直接用微信“扫一扫”打开的，这个情况下，optionMenu、toolbar都是off状态
         //     // 为了方便用户测试，我先来trigger show一下
         //     // optionMenu
@@ -172,88 +234,7 @@
         //     // elOptionMenu.click(); // 先隐藏
         //     // elOptionMenu.click(); // 再显示
         // });
-
+        
     </script>
-        <title>
-            唐惠安的个人主页
-        </title>
-    </head>
-    
-    <body>
-        <!-- HEADER -->
-        <div id="header_wrap" class="outer">
-            <header class="inner">
-                <a id="forkme_banner" href="https://github.com/stupidtang">
-                    进入我的github仓库
-                </a>
-                <h1 id="project_title">
-                    姓唐，名惠安
-                </h1>
-                <h2 id="project_tagline">
-                    不要让这个世界的复杂性阻碍你前进，
-                    <br>
-                    要成为一个行动主义者。
-                </h2>
-                
-            </header>
-        </div>
-        <!-- MAIN CONTENT -->
-        <!-- 顶部个人名称及签名 -->
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
-                <h3>
-                    <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"
-                    aria-hidden="true">
-                        <span class="octicon octicon-link">
-                        </span>
-                    </a>
-                    Welcome to My home.
-                </h3>
-                <p>
-                    我，一直在路上
-                </p>
-            </section>
-        </div>
-        <!-- 个人图片 -->
-        <div id="main11">
-          <img src="images/me.jpg" width="30%">
-        </div>
-        <!-- 美景链接板块 -->
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
-                <h3>
-                    <a href="general.html">美景图片->点击查看更多</a>                
-                </h3>
-            </section>
-        </div>
-        <div id="main11">
-          <img src="images/pic1.jpg" width="50%" >
-        </div>
-        <!-- 西安游记板块 -->
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
-                <h3>
-                    <a href="xian.html">西安游记->点击查看详情</a>                
-                </h3>
-            </section>
-        </div>
-        <div id="main11">
-          <img src="images/xian/xian.png" width="50%" >
-        </div>
-        <!-- FOOTER -->
-        <div id="footer_wrap" class="outer">
-            <footer class="inner">
-                <p>
-                    Published with
-                    <a href="http://pages.github.com">
-                        GitHub Pages
-                    </a>
-                </p>
-                <p>
-                    Copyright by Fion@2015
-                </p>
-            </footer>
-        </div>
-    </body>
 
 </html>
